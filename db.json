@@ -89,6 +89,24 @@
       "date": "2019-03-22T09:08:00.000Z",
       "time": "14:00",
       "attendeees": []
+    },
+    {
+      "id": 569284,
+      "user": {
+        "id": "111aaa",
+        "name": "Jamie"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "111aaa",
+        "name": "Jamie"
+      },
+      "title": "Build House",
+      "description": "Let's Do it",
+      "location": "Lalitpur",
+      "date": "2019-03-07T15:23:00.000Z",
+      "time": "16:00",
+      "attendeees": []
     }
   ]
 }
