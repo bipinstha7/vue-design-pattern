@@ -11,6 +11,7 @@
 
 <script>
 export default {
+    name: 'EventCard',
     data() {
         return {
             event: {

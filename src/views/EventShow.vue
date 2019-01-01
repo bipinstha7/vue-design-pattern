@@ -3,6 +3,7 @@
 </template>
 <script>
 export default {
+    name: 'EventShow',
     props: {
         id: {
             type: Number,
