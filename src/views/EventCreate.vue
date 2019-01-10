@@ -63,7 +63,7 @@ export default {
         createEvent() {
             /* only clear the data after the successful dabase store */
             this.$store
-                .dispatch('createEvent', this.event)
+                .dispatch('event/createEvent', this.event)
                 .then(() => {
                     this.$router.push({
                         name: 'event-show',
