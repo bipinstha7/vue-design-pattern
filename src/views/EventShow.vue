@@ -28,7 +28,7 @@
     </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
     name: 'EventShow',
@@ -39,11 +39,12 @@ export default {
         }
     },
     created() {
-        this.$store.dispatch('event/fetchEvent', this.id)
+        this.fetchEvent(this.id)
     },
     computed: mapState({
         event: state => state.event.event
-    })
+    }),
+    methods: mapActions('event', ['fetchEvent'])
 }
 </script>
 <style scoped>
