@@ -6,7 +6,7 @@
 </template>
 <script>
 import EventCard from '@/components/EventCard.vue'
-import axios from 'axios'
+import EventService from '@/services/EventService.js'
 
 export default {
     name: 'EventList',
@@ -19,8 +19,7 @@ export default {
         }
     },
     created() {
-        axios
-            .get('https://raw.githubusercontent.com/bipinstha7/vue-design-pattern/master/db.json')
+        EventService.getEvents()
             .then(response => {
                 this.events = response.data.events
             })
