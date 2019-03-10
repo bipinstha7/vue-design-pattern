@@ -21,7 +21,7 @@ export default {
     created() {
         EventService.getEvents()
             .then(response => {
-                this.events = response.data.events
+                this.events = response.data
             })
             .catch(err => console.log('err', err))
     }
