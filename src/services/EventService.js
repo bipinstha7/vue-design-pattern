@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-    baseURL: 'https://raw.githubusercontent.com/bipinstha7/vue-design-pattern/master',
+    baseURL: 'https://my-json-server.typicode.com/bipinstha7/vue-design-pattern',
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -10,6 +10,9 @@ const apiClient = axios.create({
 
 export default {
     getEvents() {
-        return apiClient.get('/db.json')
+        return apiClient.get('/events')
+    },
+    getEvent(id) {
+        return apiClient.get(`/events/${id}`)
     }
 }
