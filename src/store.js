@@ -16,7 +16,8 @@ export default new Vuex.Store({
             'food',
             'community'
         ],
-        events: []
+        events: [],
+        event: {}
     },
     mutations: {
         ADD_EVENT(state, event) {
@@ -24,6 +25,9 @@ export default new Vuex.Store({
         },
         SET_EVENTS(state, events) {
             state.events = events
+        },
+        SET_EVENT(state, event) {
+            state.event = event
         }
     },
     actions: {
@@ -37,6 +41,19 @@ export default new Vuex.Store({
             EventService.getEvents(perPage, page)
                 .then(response => {
                     commit('SET_EVENTS', response.data)
+                })
+                .catch(err => console.log('err', err))
+        },
+        fetchEvent({ commit, getters }, id) {
+            let event = getters.getEventById(id)
+
+            if (event) {
+                return commit('SET_EVENT', event)
+            }
+
+            EventService.getEvent(id)
+                .then(response => {
+                    commit('SET_EVENT', response.data)
                 })
                 .catch(err => console.log('err', err))
         }
