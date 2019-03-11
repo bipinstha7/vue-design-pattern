@@ -11,7 +11,6 @@ const apiClient = axios.create({
 
 export default {
     getEvents(perPage, page) {
-        console.log('page', page, 'limit', perPage)
         return apiClient.get(`/events?_page=${page}&_limit=${perPage}`)
     },
     getEvent(id) {
