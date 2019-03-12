@@ -40,15 +40,16 @@ export default {
             default: 0
         }
     },
-    beforeRouteEnter(to, from , next) {
-        NProgress.start()
+    /* It's been done through global route guards(beforeEach and afterEach) and per-route guard(beforeEnter) in router.js */
+    // beforeRouteEnter(to, from , next) {
+    //     NProgress.start()
 
-        store.dispatch('event/fetchEvent', to.params.id)
-            .then(() => {
-                NProgress.done()
-                next()
-            })
-    },
+    //     store.dispatch('event/fetchEvent', to.params.id)
+    //         .then(() => {
+    //             NProgress.done()
+    //             next()
+    //         })
+    // },
     computed: mapState({
         event: state => state.event.event
     }),
