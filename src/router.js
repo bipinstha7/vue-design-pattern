@@ -32,7 +32,11 @@ const router = new Router({
             props: true,
             beforeEnter(to, from, next) {
                 store.dispatch('event/fetchEvent', to.params.id)
-                    .then(() => next())
+                    .then((event) => {
+                        /* This event will be sent as a prop because of props: true */
+                        to.params.event = event
+                        next()
+                    })
             }
         },
         {
