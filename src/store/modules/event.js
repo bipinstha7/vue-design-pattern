@@ -69,7 +69,7 @@ export const actions = {
             return commit('SET_EVENT', event)
         }
 
-        EventService.getEvent(id)
+        return EventService.getEvent(id)
             .then(response => {
                 commit('SET_EVENT', response.data)
             })
