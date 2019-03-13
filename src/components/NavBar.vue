@@ -2,7 +2,7 @@
     <div id="nav" class="nav">
         <router-link to="/" class="brand">Real World Events</router-link>
         <nav>
-            <router-link :to="{ name: 'event-list' }">List</router-link> |
+            <router-link :to="{ name: 'event-list' }">List</router-link>|
             <router-link :to="{ name: 'event-create' }">Create</router-link>
         </nav>
     </div>
@@ -36,4 +36,4 @@ export default {}
     color: #39b982;
     border-bottom: solid 2px #39b982;
 }
-</style> 
+</style>
