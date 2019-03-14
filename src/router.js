@@ -34,7 +34,8 @@ const router = new Router({
             component: EventShow,
             props: true,
             beforeEnter(to, from, next) {
-                store.dispatch('event/fetchEvent', to.params.id)
+                store
+                    .dispatch('event/fetchEvent', to.params.id)
                     .then(event => {
                         /* This event will be sent as a prop because of props: true */
                         to.params.event = event
@@ -42,7 +43,7 @@ const router = new Router({
                     })
                     .catch(err => {
                         if (err.response && err.response.status == 404) {
-                            return next({name: '404', params: { resource: 'event'}})
+                            return next({ name: '404', params: { resource: 'event' } })
                         }
 
                         next({ name: 'network-issue' })
@@ -67,7 +68,7 @@ const router = new Router({
         },
         {
             path: '*',
-            redirect: { name: '404', params: { resource: 'page'} }
+            redirect: { name: '404', params: { resource: 'page' } }
         }
     ]
 })
@@ -75,10 +76,10 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     NProgress.start()
     next()
-}) 
+})
 
 router.afterEach((to, from, next) => {
     NProgress.done()
-}) 
+})
 
 export default router
