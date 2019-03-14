@@ -1,112 +1,112 @@
 {
-  "events": [
-    {
-      "id": 1,
-      "title": "Bagmati Cleanup",
-      "date": "Aug 28 2018",
-      "time": "10:00",
-      "location": "Pashupati, Gaushala",
-      "description": "Let's clean up bagmati.",
-      "organizer": "Catelyn Stark",
-      "category": "sustainability",
-      "attendees": [
+    "events": [
         {
-          "id": "abc123",
-          "name": "John Snow"
+            "id": 1,
+            "title": "Bagmati Cleanup",
+            "date": "2019-01-03T21:54:00.000Z",
+            "time": "10:00",
+            "location": "Pashupati, Gaushala",
+            "description": "Let's clean up bagmati.",
+            "organizer": "Catelyn Stark",
+            "category": "sustainability",
+            "attendees": [
+                {
+                    "id": "abc123",
+                    "name": "John Snow"
+                },
+                {
+                    "id": "def456",
+                    "name": "Arya Stark"
+                },
+                {
+                    "id": "ghi789",
+                    "name": "Sans Stark"
+                },
+                {
+                    "id": "jkl101",
+                    "name": "Bran Stark"
+                }
+            ]
         },
         {
-          "id": "def456",
-          "name": "Arya Stark"
+            "id": 2,
+            "title": "Park Cleanup",
+            "date": "2019-01-31T22:09:00.000Z",
+            "time": "12:00",
+            "location": "UN Park",
+            "description": "We're going to clean up this park.",
+            "organizer": "House Lannister",
+            "category": "nature",
+            "attendees": [
+                {
+                    "id": "ghi789",
+                    "name": "Tyrion Lannister"
+                },
+                {
+                    "id": "jkl101",
+                    "name": "Cersei Lannister"
+                }
+            ]
         },
         {
-          "id": "ghi789",
-          "name": "Sans Stark"
+            "id": 3,
+            "title": "Blood Donation",
+            "date": "2019-02-02T23:27:00.000Z",
+            "time": "12:00",
+            "location": "Pepsicola, Kathmandu",
+            "description": "There is no great joy than saving a soul.",
+            "organizer": "House Targaryen",
+            "category": "Life",
+            "attendees": [
+                {
+                    "id": "abc123",
+                    "name": "Daenerys Targaryen"
+                },
+                {
+                    "id": "ghi789",
+                    "name": "Missandei"
+                },
+                {
+                    "id": "jkl101",
+                    "name": "Grey Worm"
+                }
+            ]
         },
         {
-          "id": "jkl101",
-          "name": "Bran Stark"
+            "id": 9754590,
+            "user": {
+                "id": "111aaa",
+                "name": "Jamie"
+            },
+            "category": "education",
+            "organizer": {
+                "id": "111aaa",
+                "name": "Jamie"
+            },
+            "title": "Node",
+            "description": "Software Development Conf",
+            "location": "Newroad, Kathmandu",
+            "date": "2019-03-22T09:08:00.000Z",
+            "time": "14:00",
+            "attendeees": []
+        },
+        {
+            "id": 569284,
+            "user": {
+                "id": "111aaa",
+                "name": "Jamie"
+            },
+            "category": "housing",
+            "organizer": {
+                "id": "111aaa",
+                "name": "Jamie"
+            },
+            "title": "Build House",
+            "description": "Let's Do it",
+            "location": "Lalitpur",
+            "date": "2019-03-07T15:23:00.000Z",
+            "time": "16:00",
+            "attendeees": []
         }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Park Cleanup",
-      "date": "Nov 12 2018",
-      "time": "12:00",
-      "location": "UN Park",
-      "description": "We're going to clean up this park.",
-      "organizer": "House Lannister",
-      "category": "nature",
-      "attendees": [
-        {
-          "id": "ghi789",
-          "name": "Tyrion Lannister"
-        },
-        {
-          "id": "jkl101",
-          "name": "Cersei Lannister"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Blood Donation",
-      "date": "Dec 2 2018",
-      "time": "12:00",
-      "location": "Pepsicola, Kathmandu",
-      "description": "There is no great joy than saving a soul.",
-      "organizer": "House Targaryen",
-      "category": "Life",
-      "attendees": [
-        {
-          "id": "abc123",
-          "name": "Daenerys Targaryen"
-        },
-        {
-          "id": "ghi789",
-          "name": "Missandei"
-        },
-        {
-          "id": "jkl101",
-          "name": "Grey Worm"
-        }
-      ]
-    },
-    {
-      "id": 9754590,
-      "user": {
-        "id": "111aaa",
-        "name": "Jamie"
-      },
-      "category": "education",
-      "organizer": {
-        "id": "111aaa",
-        "name": "Jamie"
-      },
-      "title": "Node",
-      "description": "Software Development Conf",
-      "location": "Newroad, Kathmandu",
-      "date": "2019-03-22T09:08:00.000Z",
-      "time": "14:00",
-      "attendeees": []
-    },
-    {
-      "id": 569284,
-      "user": {
-        "id": "111aaa",
-        "name": "Jamie"
-      },
-      "category": "housing",
-      "organizer": {
-        "id": "111aaa",
-        "name": "Jamie"
-      },
-      "title": "Build House",
-      "description": "Let's Do it",
-      "location": "Lalitpur",
-      "date": "2019-03-07T15:23:00.000Z",
-      "time": "16:00",
-      "attendeees": []
-    }
-  ]
+    ]
 }
