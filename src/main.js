@@ -2,10 +2,14 @@ import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'nprogress/nprogress.css'
+import Vuelidate from 'vuelidate'
 
 import App from './App.vue'
 import router from './router'
 import store from './store/store'
+
+Vue.use(Vuelidate)
+
 const requireComponent = require.context(
     // The relative path of the components folder
     './components',
