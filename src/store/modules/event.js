@@ -66,12 +66,18 @@ export const actions = {
         let event = getters.getEventById(id)
 
         if (event) {
-            return commit('SET_EVENT', event)
+            commit('SET_EVENT', event)
+
+            /* return event so that it will be accessible in router promise */
+            return event
         }
 
         return EventService.getEvent(id)
             .then(response => {
                 commit('SET_EVENT', response.data)
+
+                /* return event so that it will be accessible in router */
+                return response.data
             })
             .catch(err => {
                 const notification = {
