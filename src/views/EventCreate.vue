@@ -44,6 +44,8 @@
 </template>
 <script>
 import Datepicker from 'vuejs-datepicker'
+import NProgress from 'nprogress'
+
 export default {
     components: {
         Datepicker
@@ -61,6 +63,8 @@ export default {
     },
     methods: {
         createEvent() {
+            NProgress.start()
+
             /* only clear the data after the successful dabase store */
             this.$store
                 .dispatch('event/createEvent', this.event)
@@ -71,7 +75,7 @@ export default {
                     })
                     this.event = this.createFreshEventObject()
                 })
-                .catch(err => console.log('err', err))
+                .catch(err => NProgress.done())
         },
         createFreshEventObject() {
             const user = this.$store.state.user.user
