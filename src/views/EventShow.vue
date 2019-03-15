@@ -28,31 +28,14 @@
     </div>
 </template>
 <script>
-import { mapState } from 'vuex'
-import NProgress from 'nprogress'
-import store from '@/store/store'
-
 export default {
     name: 'EventShow',
     props: {
-        id: {
-            type: Number,
-            default: 0
+        event: {
+            type: Object,
+            required: true
         }
-    },
-    /* It's been done through global route guards(beforeEach and afterEach) and per-route guard(beforeEnter) in router.js */
-    // beforeRouteEnter(to, from , next) {
-    //     NProgress.start()
-
-    //     store.dispatch('event/fetchEvent', to.params.id)
-    //         .then(() => {
-    //             NProgress.done()
-    //             next()
-    //         })
-    // },
-    computed: mapState({
-        event: state => state.event.event
-    }),
+    }
 }
 </script>
 <style scoped>
