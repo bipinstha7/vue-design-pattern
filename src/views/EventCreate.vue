@@ -122,6 +122,7 @@ export default {
     },
     methods: {
         createEvent() {
+            // before dispatching action, touch and make dirty form
             this.$v.$touch()
             if (!this.$v.$invalid) {
                 NProgress.start()
