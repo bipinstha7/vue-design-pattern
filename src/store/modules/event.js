@@ -63,7 +63,9 @@ export const actions = {
                 dispatch('notification/add', notification, {root: true})
             })
     },
-    fetchEvent({ commit, getters }, id) {
+    fetchEvent({ commit, getters, state }, id) {
+        if (id == state.event.id) return state.event
+
         let event = getters.getEventById(id)
 
         if (event) {
@@ -79,15 +81,6 @@ export const actions = {
 
                 /* return event so that it will be accessible in router */
                 return response.data
-            })
-            .catch(err => {
-                const notification = {
-                    type: 'error',
-                    message: `There was a problem fetching event: ${err.message}`
-                }
-
-                /* The way we dispatch the action of another namespaced module */
-                dispatch('notification/add', notification, {root: true})
             })
     }
 }
