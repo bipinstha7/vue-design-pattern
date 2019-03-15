@@ -13,6 +13,7 @@ Vue.filter('date', DateFilter)
 
 Vue.use(Vuelidate)
 
+// Global component which has Base prefix
 const requireComponent = require.context(
     // The relative path of the components folder
     './components',
