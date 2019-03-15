@@ -33,7 +33,7 @@ export const actions = {
                 }
 
                 /* The way we dispatch the action of another namespaced module */
-                dispatch('notification/add', notification, {root: true})
+                dispatch('notification/add', notification, { root: true })
             })
             .catch(err => {
                 const notification = {
@@ -42,7 +42,7 @@ export const actions = {
                 }
 
                 /* The way we dispatch the action of another namespaced module */
-                dispatch('notification/add', notification, {root: true})
+                dispatch('notification/add', notification, { root: true })
 
                 /* throw err so that the event create component can act upon the error, o.e stay on the same page without clearing the form */
                 throw err
@@ -60,7 +60,7 @@ export const actions = {
                 }
 
                 /* The way we dispatch the action of another namespaced module */
-                dispatch('notification/add', notification, {root: true})
+                dispatch('notification/add', notification, { root: true })
             })
     },
     fetchEvent({ commit, getters, state }, id) {
@@ -75,13 +75,12 @@ export const actions = {
             return event
         }
 
-        return EventService.getEvent(id)
-            .then(response => {
-                commit('SET_EVENT', response.data)
+        return EventService.getEvent(id).then(response => {
+            commit('SET_EVENT', response.data)
 
-                /* return event so that it will be accessible in router */
-                return response.data
-            })
+            /* return event so that it will be accessible in router */
+            return response.data
+        })
     }
 }
 
