@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- $listeners listens the events such as click event -->
         <button v-on="$listeners" class="button" :class="buttonClass">
             <slot></slot>
         </button>
