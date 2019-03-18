@@ -21,7 +21,7 @@ export const mutations = {
 }
 
 export const actions = {
-    /* update to store only after successful data store */
+    /* update to store only after successful database store */
     createEvent({ commit, dispatch }, event) {
         return EventService.postEvent(event)
             .then(() => {
