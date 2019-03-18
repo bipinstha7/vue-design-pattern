@@ -1,5 +1,4 @@
 import axios from 'axios'
-import NProgress from 'nprogress'
 
 const apiClient = axios.create({
     // baseURL: 'https://my-json-server.typicode.com/bipinstha7/vue-design-pattern',
