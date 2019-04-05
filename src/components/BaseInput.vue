@@ -3,7 +3,9 @@
         <label v-if="label">{{ label }}</label>
         <!-- Both methods gives result -->
         <!-- <input :type="type" :placeholder="placeholder" :value="value" @input="updateValue" v-on="listeners" /> -->
-        <!-- $attrs handles all of the attributes passed by the parent component -->
+        <!-- $attrs handles all of the attributes passed by the parent component 
+            -- here type, placeholder and other attributes(if any) are handled by $attrs
+        -->
         <input :value="value" @input="updateValue" v-bind="$attrs" v-on="listeners" />
     </div>
 </template>
