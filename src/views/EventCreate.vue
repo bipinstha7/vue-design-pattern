@@ -110,6 +110,7 @@ export default {
             event: this.createFreshEventObject()
         }
     },
+    /* vuelidate validation */
     validations: {
         event: {
             category: { required },
