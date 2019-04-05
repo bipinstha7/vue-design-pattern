@@ -1,6 +1,7 @@
 <template>
     <div class="icon-wrapper">
         <svg class="icon" :width="width" :height="height">
+            <!-- feather-sprite.svg on public folder -->
             <use v-bind="{ 'xlink:href': '/feather-sprite.svg#' + name }"></use>
         </svg>
         <slot></slot>
