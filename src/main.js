@@ -34,7 +34,7 @@ requireComponent.keys().forEach(fileName => {
             fileName
                 .split('/')
                 .pop()
-                // Remove file extension from the end
+                // Remove file extension from the end of the file name
                 .replace(/\.\w+$/, '')
         )
     )
